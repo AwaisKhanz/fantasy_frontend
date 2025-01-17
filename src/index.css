@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* General reset */
+
+.index {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background: #013220; /* Dark green background */
+  color: white;
+  overflow: hidden;
+}
+
+/* Background style */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    #013220,
+    #ffffff
+  ); /* Green to white gradient */
+  animation: moveBackground 10s infinite;
+  z-index: -1;
+  filter: brightness(0.85);
+}
+
+@keyframes moveBackground {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-10%, -10%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Glow effect */
+.glow-text {
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #013220,
+    0 0 40px #013220;
+}
+
+/* Heading style */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ffffff; /* Solid white color for better readability */
+  text-shadow: 0 0 10px #013220, 0 0 20px #013220; /* Green glow effect for contrast */
+  margin: 0;
+  animation: pulseText 2s infinite;
+}
+
+@keyframes pulseText {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #ffffff; /* White subtitle text */
+}
+
+/* Button style */
+.cta-button {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #013220; /* Green text */
+  background: #ffffff; /* White background */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s, color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 15px #ffffff;
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+  background: #ffd700; /* Gold background on hover */
+  color: #013220; /* Green text on hover */
+  box-shadow: 0 0 25px #ffd700; /* Gold glow on hover */
+}
+
+/* Trophy icon style */
+.trophy-icon {
+  margin-top: 1.5rem;
+  width: 50px;
+  height: 50px;
+  fill: #ffd700; /* Set fill to gold for trophy */
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
