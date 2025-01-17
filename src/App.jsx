@@ -12,7 +12,7 @@ const App = () => {
   return (
     <>
       <ToastContainer />
-      <Navbar />
+
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -21,6 +21,7 @@ const App = () => {
             path="/dashboard"
             element={
               <ProtectedRoute>
+                <Navbar />
                 <Dashboard />
               </ProtectedRoute>
             }
@@ -29,6 +30,7 @@ const App = () => {
             path="/awards/:leagueKey"
             element={
               <ProtectedRoute>
+                <Navbar />
                 <Awards />
               </ProtectedRoute>
             }

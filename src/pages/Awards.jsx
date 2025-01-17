@@ -59,7 +59,7 @@ const Awards = () => {
     <div style={{ padding: "20px" }}>
       <h1>League Awards 🏆</h1>
 
-      <Bar data={data} />
+      <Bar data={data} height={500} />
 
       <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
         {awards.map((award, index) => (
